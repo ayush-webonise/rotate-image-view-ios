@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RotateImageUsingSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZb-Tx-VUc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="Afy-4M-j5l">
+                                        <rect key="frame" x="6" y="393" width="308" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="S4d-Qn-64E"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HF-js-ifb">
+                                        <rect key="frame" x="73" y="440" width="134" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.51764705879999995" green="0.76078431369999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_rotate" translatesAutoresizingMaskIntoConstraints="NO" id="3ns-Vy-Elr">
+                                        <rect key="frame" x="134" y="81" width="66" height="178"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2048802065" green="0.32181985470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nYp-CD-Lju">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zZb-Tx-VUc" secondAttribute="trailing" id="d9g-Dz-kiM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zZb-Tx-VUc" secondAttribute="bottom" id="ict-w6-daq"/>
+                            <constraint firstItem="zZb-Tx-VUc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jXo-5A-7VR"/>
+                            <constraint firstItem="zZb-Tx-VUc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yRe-OD-KTn"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageRotated" destination="3ns-Vy-Elr" id="6cK-uu-k4T"/>
+                        <outlet property="labelSliderValue" destination="9HF-js-ifb" id="0T7-2N-3AZ"/>
+                        <outlet property="sliderDegreeSelector" destination="Afy-4M-j5l" id="MJv-zj-6TT"/>
+                        <outlet property="viewForTouchEVents" destination="zZb-Tx-VUc" id="YvB-j9-O99"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="370"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_rotate" width="27" height="136"/>
+    </resources>
+</document>
